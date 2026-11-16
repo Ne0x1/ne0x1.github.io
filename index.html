@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Abdelrahman Elsayed Muhammed | DFIR &amp; SOC Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Newsreader:ital,wght@0,400;0,500;1,400&display=swap">
+<style>
+:root{--bg:#eef1f4;--surface:#fff;--ink:#14202b;--muted:#5a6876;--line:#cdd5dd;--accent:#c4590a;--accent-soft:#f6e4d3;--hl:#1f5f8b;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#10171e;--surface:#18222c;--ink:#e8edf2;--muted:#9aa8b6;--line:#2c3a47;--accent:#f09a54;--accent-soft:#3a2a1c;--hl:#7fb8e0}}
+:root[data-theme="dark"]{--bg:#10171e;--surface:#18222c;--ink:#e8edf2;--muted:#9aa8b6;--line:#2c3a47;--accent:#f09a54;--accent-soft:#3a2a1c;--hl:#7fb8e0}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Newsreader",Georgia,serif;font-size:18px;line-height:1.6}
+h1,h2,h3{font-family:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif;line-height:1.1;margin:0}
+a{color:var(--hl);text-underline-offset:3px}
+a:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:2px}
+.wrap{max-width:1000px;margin:0 auto;padding:0 24px}
+header.top{display:flex;gap:20px;flex-wrap:wrap;justify-content:space-between;padding:22px 0;font-family:"Bricolage Grotesque",sans-serif;font-size:15px;font-weight:500}
+header.top nav{display:flex;gap:20px;flex-wrap:wrap}
+header.top a{color:var(--ink);text-decoration:none}
+header.top a:hover{color:var(--accent)}
+.hero{padding:56px 0 48px;border-bottom:2px solid var(--ink)}
+.hero h1{font-size:clamp(2.6rem,8.5vw,6rem);font-weight:800;letter-spacing:-.035em;max-width:11ch}
+.role{font-family:"Bricolage Grotesque",sans-serif;font-size:clamp(1.1rem,2.6vw,1.45rem);font-weight:500;margin:22px 0 0;color:var(--accent)}
+.lede{max-width:62ch;margin:20px 0 0;font-size:1.15rem}
+.links{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.btn{font-family:"Bricolage Grotesque",sans-serif;font-weight:700;font-size:15px;padding:12px 20px;border:2px solid var(--ink);text-decoration:none;color:var(--ink);border-radius:4px;background:transparent}
+.btn.primary{background:var(--ink);color:var(--bg)}
+.btn:hover{border-color:var(--accent)}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:0;margin:40px 0 0;padding:0;list-style:none;border-top:1px solid var(--line)}
+.facts li{padding:16px 16px 0 0;font-size:15px;color:var(--muted);line-height:1.4}
+.facts b{display:block;font-family:"Bricolage Grotesque",sans-serif;font-size:1.5rem;color:var(--ink);font-weight:700}
+section{padding:64px 0 8px}
+section>h2{font-size:clamp(1.8rem,4vw,2.6rem);font-weight:800;letter-spacing:-.02em;margin-bottom:8px}
+.sub{color:var(--muted);margin:0 0 32px;max-width:60ch}
+.cases{display:grid;gap:20px}
+.case{background:var(--surface);border:1px solid var(--line);border-left:6px solid var(--accent);padding:26px 28px;border-radius:4px}
+.case h3{font-size:1.4rem;margin-bottom:6px}
+.case .kind{font-size:15px;color:var(--muted);margin:0 0 12px;font-style:italic}
+.case ul{margin:0;padding-left:20px}
+.case li{margin:6px 0}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 0;padding:0;list-style:none}
+.tags li{font-family:"Bricolage Grotesque",sans-serif;font-size:13px;font-weight:500;padding:3px 10px;border-radius:99px;background:var(--accent-soft);color:var(--ink);margin:0}
+.log{margin:0;padding:0;list-style:none;border-left:2px solid var(--ink);margin-left:6px}
+.log li{position:relative;padding:0 0 34px 28px}
+.log li::before{content:"";position:absolute;left:-8px;top:8px;width:14px;height:14px;background:var(--accent);border:3px solid var(--bg);border-radius:50%}
+.when{font-family:"Bricolage Grotesque",sans-serif;font-size:14px;font-weight:700;color:var(--accent)}
+.log h3{font-size:1.25rem;margin:2px 0 4px}
+.log p,.log ul{margin:6px 0 0}
+.log ul{padding-left:20px}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:28px 40px}
+.skills h3{font-size:1.1rem;margin-bottom:8px;padding-bottom:8px;border-bottom:1px solid var(--line)}
+.skills p{margin:0;font-size:16px}
+.certs{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;margin:0;padding:0;list-style:none}
+.certs li{background:var(--surface);border:1px solid var(--line);border-radius:4px;padding:14px 16px;line-height:1.35}
+.certs b{display:block;font-family:"Bricolage Grotesque",sans-serif;font-size:1rem}
+.certs span{font-size:14px;color:var(--muted)}
+.contact{margin-top:64px;padding:44px 0 56px;border-top:2px solid var(--ink)}
+.contact h2{font-size:clamp(1.8rem,4vw,2.6rem);font-weight:800;margin-bottom:12px}
+footer{font-size:14px;color:var(--muted);padding-bottom:32px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+<strong>Abdelrahman Elsayed</strong>
+<nav aria-label="Sections"><a href="#cases">Case files</a><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#certs">Certifications</a><a href="#contact">Contact</a></nav>
+</header>
+
+<main>
+<div class="hero">
+<h1>Abdelrahman Elsayed Muhammed</h1>
+<p class="role">Digital forensics, SOC and incident response</p>
+<p class="lede">I investigate how attacks happen and what they leave behind. My work covers network and memory forensics, malware triage, and SIEM-based detection, practiced on full-cycle attack simulations and written up as incident reports.</p>
+<div class="links">
+<a class="btn primary" href="mailto:vbdelrvhmvnx@gmail.com">Email me</a>
+<a class="btn" href="https://github.com/Ne0x1">GitHub</a>
+<a class="btn" href="https://linkedin.com/in/abdelrahman-elsayed-1a31b4300">LinkedIn</a>
+</div>
+<ul class="facts">
+<li><b>17 of 20 flags</b>ICMTC-2026 National Cybersecurity Competition</li>
+<li><b>50+ students</b>mentored on SOC and DFIR as Blue Team lead</li>
+<li><b>B.Sc. AI, 2027</b>Cybersecurity track, Egyptian Russian University</li>
+<li><b>Open to roles</b>SOC, DFIR and incident response internships and junior positions</li>
+</ul>
+</div>
+
+<section id="cases">
+<h2>Case files</h2>
+<p class="sub">Each project is a worked investigation or a tool built for one, from acquisition to the final report.</p>
+<div class="cases">
+
+<article class="case">
+<h3>Full-cycle DFIR case study: Zeus Trojan</h3>
+<p class="kind">Network and memory forensics, incident report</p>
+<ul>
+<li>Simulated a real malware infection in an isolated VM, then analyzed the PCAP traffic in Wireshark and the memory dumps in FTK Imager and Volatility 3.</li>
+<li>Wrote a full incident response report covering the attack timeline, process trees, rogue DLLs and extracted IOCs.</li>
+</ul>
+<ul class="tags"><li>Wireshark</li><li>Volatility 3</li><li>FTK Imager</li><li>IOC extraction</li></ul>
+</article>
+
+<article class="case">
+<h3>Red/Blue team simulation: Metasploit to Splunk</h3>
+<p class="kind">Attack simulation and detection</p>
+<ul>
+<li>Ran an end-to-end attack with custom-obfuscated MSFvenom payloads that bypassed static detection and reached SYSTEM-level persistence.</li>
+<li>Switched sides in Splunk to trace the attacker kill chain, detect the backdoor, and propose containment and endpoint remediation.</li>
+</ul>
+<ul class="tags"><li>Splunk</li><li>Metasploit</li><li>MSFvenom</li><li>Kill chain</li></ul>
+</article>
+
+<article class="case">
+<h3>Forensic disk imager acquisition tool</h3>
+<p class="kind">Built from scratch</p>
+<ul>
+<li>Multi-threaded imaging tool with raw (dd) and E01 output and automated forensic report generation.</li>
+<li>Hashes with MD5 and SHA256 simultaneously, zero-fills bad sectors instead of failing, simulates a write blocker, and supports BitLocker decryption.</li>
+</ul>
+<ul class="tags"><li>Python</li><li>E01 and dd</li><li>Hash verification</li><li>Evidence integrity</li></ul>
+</article>
+
+<article class="case">
+<h3>DFIR case study: credential exfiltration (PonyStealer)</h3>
+<p class="kind">Threat investigation</p>
+<ul>
+<li>Analyzed a PonyStealer infection, mapped the attacker TTPs, and traced FTP credential exfiltration using Wireshark and VirusTotal.</li>
+</ul>
+<ul class="tags"><li>Wireshark</li><li>VirusTotal</li><li>MITRE ATT&amp;CK</li></ul>
+</article>
+
+<article class="case">
+<h3>Malware and reverse engineering practice</h3>
+<p class="kind">Ongoing</p>
+<ul>
+<li>Static analysis in Ghidra: binary structure, suspicious strings and basic control flow.</li>
+<li>Studies malware behavior through sandbox reports and memory artifacts to sharpen DFIR triage.</li>
+</ul>
+<ul class="tags"><li>Ghidra</li><li>Sandbox reports</li><li>Memory artifacts</li></ul>
+</article>
+
+</div>
+</section>
+
+<section id="experience">
+<h2>Experience</h2>
+<p class="sub">Leadership, training and competition record.</p>
+<ol class="log">
+<li>
+<span class="when">09/2025 to present</span>
+<h3>Co-founder and Defensive Security Lead, Egyptian Russian University Security Club</h3>
+<ul>
+<li>Co-founded the university’s cybersecurity club and lead its Defensive Security (Blue Team) division.</li>
+<li>Mentor more than 50 students on SOC fundamentals, DFIR workflows and threat analysis methods.</li>
+<li>Organize practical labs, workshops and CTF challenges for members.</li>
+</ul>
+</li>
+<li>
+<span class="when">2026</span>
+<h3>CTF competitor, ICMTC-2026 National Cybersecurity Competition</h3>
+<p>Captured 17 of 20 flags across reverse engineering, cryptography, digital forensics and web, using binary analysis, cipher breaking, artifact examination and web exploitation under time pressure.</p>
+</li>
+<li>
+<span class="when">07/2025 to 08/2025</span>
+<h3>Cybersecurity trainee, Sprints x Microsoft Bootcamp</h3>
+<p>Completed a 40-hour bootcamp on practical cybersecurity scenarios, incident handling and advanced threat containment.</p>
+</li>
+<li>
+<span class="when">03/2024 to present</span>
+<h3>CTF competitor, CyberTalents, picoCTF, CTFlearn, Applied OSINT</h3>
+<p>Solved challenges in digital forensics, steganography, file carving, cryptography and OSINT, practicing artifact recovery and evidence analysis on realistic investigation scenarios.</p>
+</li>
+</ol>
+</section>
+
+<section id="skills">
+<h2>Technical skills</h2>
+<p class="sub">Tools I use in investigations and detection work.</p>
+<div class="skills">
+<div><h3>Forensics and analysis</h3><p>Wireshark, Volatility 3, FTK Imager, Autopsy, ALEAPP, MobSF, Binwalk, Foremost, Ghidra (static analysis)</p></div>
+<div><h3>SIEM and log analysis</h3><p>Splunk, ELK Stack, Windows Event Logs, Sysmon, Apache and Nginx logs, alert triage, MITRE ATT&amp;CK mapping</p></div>
+<div><h3>Security domains</h3><p>DFIR, SOC operations, malware analysis, reverse engineering, penetration testing basics</p></div>
+<div><h3>Programming</h3><p>Python, Bash, C++, Java, PHP, HTML, CSS, JavaScript</p></div>
+<div><h3>Cloud</h3><p>AWS fundamentals: EC2, IAM, networking basics</p></div>
+<div><h3>Languages</h3><p>Arabic (native), English (professional), Russian (basic)</p></div>
+</div>
+</section>
+
+<section id="certs">
+<h2>Certifications and courses</h2>
+<p class="sub">&nbsp;</p>
+<ul class="certs">
+<li><b>eCIR v1</b><span>Netriders Academy</span></li>
+<li><b>eJPT v1</b><span>Netriders Academy</span></li>
+<li><b>SOC Level 1</b><span>TryHackMe</span></li>
+<li><b>Jr Penetration Tester</b><span>TryHackMe</span></li>
+<li><b>Digital Forensics: Analyzing Memory</b><span>Mahara-Tech ITI</span></li>
+<li><b>AWS Certified Cloud Foundations</b><span>AWS Academy</span></li>
+<li><b>Cisco CCNA</b><span>Self-study</span></li>
+<li><b>CompTIA Network+</b><span>Self-study</span></li>
+</ul>
+</section>
+
+<div class="contact" id="contact">
+<h2>Let’s talk</h2>
+<p class="lede">I’m looking for SOC analyst, DFIR, incident response and threat intelligence internships and junior roles. Based in 10th of Ramadan, Egypt.</p>
+<div class="links">
+<a class="btn primary" href="mailto:vbdelrvhmvnx@gmail.com">vbdelrvhmvnx@gmail.com</a>
+<a class="btn" href="https://linkedin.com/in/abdelrahman-elsayed-1a31b4300">LinkedIn</a>
+<a class="btn" href="https://github.com/Ne0x1">GitHub</a>
+</div>
+</div>
+</main>
+<footer>© 2026 Abdelrahman Elsayed Muhammed</footer>
+</div>
+</body>
+</html>
